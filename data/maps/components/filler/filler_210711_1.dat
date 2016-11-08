@@ -159,7 +159,7 @@ tile{
   y = 8,
   width = 32,
   height = 24,
-  pattern = "wall_pipe.1",
+  pattern = "wall_hole.n",
 }
 
 tile{
@@ -168,7 +168,7 @@ tile{
   y = 48,
   width = 24,
   height = 32,
-  pattern = "wall_statue.6.3",
+  pattern = "wall_statue.5.w",
 }
 
 tile{

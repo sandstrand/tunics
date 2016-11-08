@@ -87,7 +87,7 @@ tile{
   y = 40,
   width = 64,
   height = 32,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{
@@ -420,7 +420,7 @@ tile{
   y = 8,
   width = 32,
   height = 24,
-  pattern = "wall_pipe.1",
+  pattern = "wall_hole.n",
 }
 
 tile{
@@ -429,7 +429,7 @@ tile{
   y = 8,
   width = 32,
   height = 24,
-  pattern = "wall_pipe.1",
+  pattern = "wall_hole.n",
 }
 
 tile{
@@ -438,7 +438,7 @@ tile{
   y = 208,
   width = 32,
   height = 24,
-  pattern = "wall_pipe.2",
+  pattern = "wall_hole.s",
 }
 
 tile{
@@ -447,7 +447,7 @@ tile{
   y = 208,
   width = 32,
   height = 24,
-  pattern = "wall_pipe.2",
+  pattern = "wall_hole.s",
 }
 
 tile{

@@ -24,7 +24,7 @@ tile{
   y = 56,
   width = 32,
   height = 32,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{
@@ -33,7 +33,7 @@ tile{
   y = 152,
   width = 32,
   height = 32,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{
@@ -42,7 +42,7 @@ tile{
   y = 152,
   width = 32,
   height = 32,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{
@@ -51,7 +51,7 @@ tile{
   y = 56,
   width = 32,
   height = 32,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{
@@ -60,7 +60,7 @@ tile{
   y = 64,
   width = 64,
   height = 64,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{

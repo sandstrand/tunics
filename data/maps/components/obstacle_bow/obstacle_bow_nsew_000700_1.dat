@@ -214,7 +214,7 @@ dynamic_tile{
   width = 32,
   height = 32,
   name = "treasure_obstacle_carpet",
-  pattern = "floor.20",
+  pattern = "floor.boss",
   enabled_at_start = true,
 }
 

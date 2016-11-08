@@ -51,7 +51,7 @@ tile{
   y = 40,
   width = 64,
   height = 32,
-  pattern = "floor.20",
+  pattern = "floor.boss",
 }
 
 tile{
