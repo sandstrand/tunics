@@ -70,13 +70,12 @@ local puzzle = Quest.render_steps(puzzle_rng, steps, max_heads, brought_items)
 if tileset_override then
     map:set_tileset(tileset_override)
 else
-    local i, tileset = presentation_rng:refine('tileset'):ichoose(zentropy.tilesets.dungeon[mapping.family])
-    map:set_tileset(tileset)
+    map:set_tileset(mapping.tileset)
 end
 
 
 if not sol.audio.get_music() then 
-	sol.audio.play_music(mapping.music)
+	sol.audio.play_music(mapping.get_music(tier))
 end
 
 local solarus_layout = Layout.solarus_mixin(layout:new{rng=layout_rng}, map, {floor1, floor2})
