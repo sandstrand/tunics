@@ -3872,7 +3872,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.e",
+  id = "low_wall.e",
   ground = "wall",
   default_layer = 0,
   x = 112,
@@ -3883,7 +3883,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.n",
+  id = "low_wall.n",
   ground = "wall",
   default_layer = 0,
   x = 104,
@@ -3894,7 +3894,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.ne.1",
+  id = "low_wall.ne.1",
   ground = "wall",
   default_layer = 0,
   x = 216,
@@ -3905,7 +3905,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.ne.2",
+  id = "low_wall.ne.2",
   ground = "wall",
   default_layer = 0,
   x = 200,
@@ -3916,7 +3916,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.nw.1",
+  id = "low_wall.nw.1",
   ground = "wall",
   default_layer = 0,
   x = 136,
@@ -3927,7 +3927,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.nw.2",
+  id = "low_wall.nw.2",
   ground = "wall",
   default_layer = 0,
   x = 152,
@@ -3938,7 +3938,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.s",
+  id = "low_wall.s",
   ground = "wall",
   default_layer = 0,
   x = 120,
@@ -3949,7 +3949,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.se.1",
+  id = "low_wall.se.1",
   ground = "wall",
   default_layer = 0,
   x = 216,
@@ -3960,7 +3960,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.se.2",
+  id = "low_wall.se.2",
   ground = "wall",
   default_layer = 0,
   x = 200,
@@ -3971,7 +3971,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.sw.1",
+  id = "low_wall.sw.1",
   ground = "wall",
   default_layer = 0,
   x = 136,
@@ -3982,7 +3982,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.sw.2",
+  id = "low_wall.sw.2",
   ground = "wall",
   default_layer = 0,
   x = 152,
@@ -3993,7 +3993,7 @@ tile_pattern{
 }
 
 tile_pattern{
-  id = "wall.low.w",
+  id = "low_wall.w",
   ground = "wall",
   default_layer = 0,
   x = 96,

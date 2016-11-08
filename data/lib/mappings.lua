@@ -1,12 +1,76 @@
-local family_tier = {
-    tower_of_hera = 1,
-}
-
-local family_music = {
-    tower_of_hera = {
-        'dungeon_dark',
+local dungeon_styles = {
+    {
+        -- palette = 'dungeon.tower_of_hera.1';
+        tier_introduction = 1,
+        tileset = 'dungeon.tower_of_hera',
+        floor = {
+            scope = 'room',
+            {
+                high = { 'floor.a.12.high', 'floor.a.6.high' },
+                low = { 'floor.a.13.low.' },
+                p = 0.75,
+            },
+            {
+                high = { 'floor.b.12.high', },
+                low = { 'floor.a.13.low', },
+                p = 0.25,
+            },
+        },
+        wall_pillars = {
+            scope = 'room',
+            {
+                socket = { 'pillar.4', },
+                socketless = { 'pillar.4.socketless' },
+            }
+        },
+        drapes = {
+            scope = 'room',
+            { nil },
+        },
+        statues = {
+            scope = 'room',
+            { 'statue.1', p = 0.25 },
+            { 'statue.2'},
+        },
+        wall_statues = {
+            scope = 'room',
+            { 'wall_statue.6' },
+        },
+        barrier = {
+            scope = 'dungeon',
+            { 'barrier.1' },
+        },
+        hole = {
+            scope = 'room',
+            { 'hole' },
+        },
+        big_barrier = {
+            scope = 'dungeon',
+            { 'big_barrier.3' },
+        },
+        stage = {
+            scope = 'dungeon',
+            { 'stage.1' },
+        },
+        entrance = {
+            scope = 'dungeon',
+            { 'entrance.1' },
+        },
+        entrance_statue = {
+            scope = 'dungeon',
+            { 'entrance_statue.4' },
+        },
+        music = {
+            scope = 'dungeon',
+            { 'dungeon_light' },
+        },
+        destructibles = {
+                pot = 'entities/vase',
+                stone1 = 'entities/stone_white',
+                stone2 = 'entities/stone_black',
+        },
     },
-}
+};
 
 local tier_complexity = {
     [1] = {
@@ -35,14 +99,6 @@ local tier_complexity = {
     },
 }
 
-local family_destructibles = {
-    tower_of_hera = {
-        pot = 'entities/vase_skull',
-        stone1 = 'entities/stone_white_skull',
-        stone2 = 'entities/stone_black_skull',
-    },
-}
-
 local enemy_tier = {
     tentacle = 1,
     keese = 1,
@@ -65,21 +121,21 @@ local enemy_tier = {
     bubble = 6,
 }
 
-local function choose_family(current_tier, rng)
+local function choose_style(current_tier, rng)
     local mode = 'past'
-    local families = {}
-    for f, tier in pairs(family_tier) do
-        if tier == current_tier then
+    local styles = {}
+    for _, style in pairs(dungeon_styles) do
+        if style.tier_introduction == current_tier then
             if mode == 'past' then
-                families = {}
+                styles = {}
                 mode = 'current'
             end
-            table.insert(families, f)
-        elseif tier <= current_tier and mode == 'past' then
-            table.insert(families, f)
+            table.insert(styles, style)
+        elseif style.tier_introduction <= current_tier and mode == 'past' then
+            table.insert(styles, style)
         end
     end
-    local i, family = rng:ichoose(families)
+    local _, family = rng:ichoose(styles)
     return family
 end
 
@@ -108,18 +164,56 @@ end
 local mappings = {}
 
 function mappings.choose(current_tier, rng)
-    local family = choose_family(current_tier, rng:refine('family'))
-    local _, music = rng:refine('music'):ichoose(family_music[family])
-    local destructibles = family_destructibles[family]
+    function scoped(elements, rng)
+        if elements.scope == 'dungeon' then
+            return function (tier, room_name)
+                local seq = rng:refine(tier):seq()
+                local result = nil
+                for _, element in ipairs(elements) do
+                    if seq(element.p or 1.0) then
+                        _, result = rng:ichoose(element)
+                    end
+                end
+                return result
+            end
+        elseif elements.scope == 'room' then
+            return function (tier, room_name)
+                local seq = rng:refine(tier):refine(room_name):seq()
+                local result = nil
+                for _, element in ipairs(elements) do
+                    if seq(element.p or 1.0) then
+                        _, result = rng:ichoose(element)
+                    end
+                end
+                return result
+            end
+        else
+            -- TODO trigger unknown-scope error
+        end
+    end
+
+    local style = choose_style(current_tier, rng:refine('style'))
     local enemies = get_enemies(current_tier)
     local complexity = get_complexity(current_tier)
-    return {
-        family=family,
-        music=music,
-        destructibles=destructibles,
+    local mappings = {
+        tileset=style.tileset,
+        destructibles=style.destructibles,
         enemies=enemies,
         complexity=complexity,
     }
+    mappings.get_floor = scoped(style.floor, rng:refine('floor'))
+    mappings.get_wall_pillars = scoped(style.wall_pillars, rng:refine('wall_pillars'))
+    mappings.get_drapes = scoped(style.drapes, rng:refine('drapes'))
+    mappings.get_statues = scoped(style.statues, rng:refine('statues'))
+    mappings.get_wall_statues = scoped(style.wall_statues, rng:refine('wall_statues'))
+    mappings.get_barrier = scoped(style.barrier, rng:refine('barrier'))
+    mappings.get_hole = scoped(style.hole, rng:refine('hole'))
+    mappings.get_big_barrier = scoped(style.big_barrier, rng:refine('big_barrier'))
+    mappings.get_stage = scoped(style.stage, rng:refine('stage'))
+    mappings.get_entrance = scoped(style.entrance, rng:refine('entrance'))
+    mappings.get_entrance_statue = scoped(style.entrance_statue, rng:refine('entrance_statue'))
+    mappings.get_music = scoped(style.music, rng:refine('music'))
+    return mappings
 end
 
 return mappings

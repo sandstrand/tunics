@@ -5,7 +5,7 @@ properties{
   height = 240,
   min_layer = 0,
   max_layer = 2,
-  tileset = "dungeon_ganon_brown_1",
+  tileset = "dungeon.tower_of_hera",
   music = "same",
 }
 
@@ -15,7 +15,7 @@ tile{
   y = 168,
   width = 80,
   height = 32,
-  pattern = "floor_border.1",
+  pattern = "entrance_border",
 }
 
 tile{
@@ -42,7 +42,7 @@ tile{
   y = 208,
   width = 16,
   height = 32,
-  pattern = "floor_small.1",
+  pattern = "carpet.1",
 }
 
 tile{
@@ -51,7 +51,7 @@ tile{
   y = 232,
   width = 8,
   height = 8,
-  pattern = "barrier.1.2",
+  pattern = "placeholder.barrier.2",
 }
 
 tile{
@@ -60,7 +60,7 @@ tile{
   y = 232,
   width = 8,
   height = 8,
-  pattern = "barrier.1.2",
+  pattern = "placeholder.barrier.2",
 }
 
 dynamic_tile{
@@ -79,7 +79,7 @@ dynamic_tile{
   layer = 1,
   x = 144,
   y = 208,
-  pattern = "wall.2",
+  pattern = "high_wall.s",
   width = 32,
   height = 24,
   enabled_at_start = true,
@@ -132,7 +132,7 @@ dynamic_tile{
   layer = 1,
   x = 144,
   y = 208,
-  pattern = "door.2.support.1",
+  pattern = "door_support.r.s",
   width = 8,
   height = 16,
   enabled_at_start = true,
@@ -143,7 +143,7 @@ dynamic_tile{
   layer = 1,
   x = 168,
   y = 208,
-  pattern = "door.2.support.2",
+  pattern = "door_support.l.s",
   width = 8,
   height = 16,
   enabled_at_start = true,
@@ -317,7 +317,7 @@ tile{
   y = 224,
   width = 48,
   height = 8,
-  pattern = "door_cache.2",
+  pattern = "high_wall_top.s",
 }
 
 tile{
@@ -344,6 +344,7 @@ tile{
   y = 224,
   width = 32,
   height = 8,
-  pattern = "door_top.closed.2",
+  pattern = "closed_door_top.s",
 }
+
 

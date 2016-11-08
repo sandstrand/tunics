@@ -1,4 +1,6 @@
 #!/bin/sh
+BASE="`dirname $0`/.."
+
 compile () {
     sed -E -e '
     s:\s*$::
@@ -15,11 +17,11 @@ s/\n//
 b loop
 /^$/d
 :done
-`compile < diff_delete`
-`compile < diff_replace`
+`compile < "$BASE/diff_delete"`
+`compile < "$BASE/diff_replace"`
 s/,/,\n/g
 s/\{/{\n/g
 s/\}/}\n/g
 /^$/D
 "
-find "$@" -name '*.dat' -exec echo {} \; -exec sed -i -E "$SCRIPT" {} \;
+find "$BASE/data/maps" -name '*.dat' -exec echo {} \; -exec sed -i -E "$SCRIPT" {} \;
