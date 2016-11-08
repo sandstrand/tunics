@@ -460,3 +460,17 @@ waterfall.3.top, waterfall_top.w
 waterfall.4.bottom, waterfall_bottom.e
 waterfall.4.middle, waterfall_middle.e
 waterfall.4.top, waterfall_top.e
+dungeon_brick_blue_1, dungeon.tower_of_hera
+dungeon_brick_brown_1, dungeon.tower_of_hera
+dungeon_brick_gray_1, dungeon.tower_of_hera
+dungeon_brick_gray_2, dungeon.tower_of_hera
+dungeon_brick_green_1, dungeon.tower_of_hera
+dungeon_cave_brown_1, dungeon.tower_of_hera
+dungeon_ganon_brown_1, dungeon.tower_of_hera
+dungeon_house_brown_1, dungeon.tower_of_hera
+dungeon_ice_blue_1, dungeon.tower_of_hera
+dungeon_smoothbrick_brown_1, dungeon.tower_of_hera
+dungeon_smoothbrick_gold_1, dungeon.tower_of_hera
+dungeon_smoothbrick_green_1, dungeon.tower_of_hera
+dungeon_smoothbrick_pink_1, dungeon.tower_of_hera
+
