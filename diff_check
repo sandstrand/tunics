@@ -1,0 +1,77 @@
+// Check occurrences of these tiles
+// If they is properly used as a water detail, leave it as wall_pipe.*
+// If not, replace with placeholder.wall_statue.* and replace as below:
+wall_pipe.1, wall_hole.n
+wall_pipe.2, wall_hole.s
+wall_pipe.3, wall_hole.w
+wall_pipe.4, wall_hole.e
+
+// Check occurrences of these tiles 
+// If they is properly used as a water detail, leave as wall_statue.6.*
+// If not, replace with place_holder.wallstatue.* and replace as below
+wall_statue.6.1, wall_statue.5.n
+wall_statue.6.2, wall_statue.5.s
+wall_statue.6.3, wall_statue.5.w
+wall_statue.6.4, wall_statue.5.e
+
+// This tile should only ever be used in boss entrance components. 
+// If found elsewhere, replace with carpet/none/other which fits the design guidelines, then replace as below
+floor.20, floor.boss
+
+// These tiles have new dimensions: 8x16 and 16x8 instead of 8x8.
+// Replace as below and review dimensions of tile in all components where present.
+water_shallow.1, shallow_water_border.n
+water_shallow.2, shallow_water_border.s
+water_shallow.3, shallow_water_border.w
+water_shallow.4, shallow_water_border.e
+
+// Manually replace entire entrance door with composite placeholder.entrance.
+// When replaced, none of these tiles should exist in any components
+door_main.2
+door_main.2.floor.1
+door_main.2.floor.2
+door_main.2.floor.3
+door_main.2.support.1
+door_main.2.support.2
+entrance_pillar.1.1.bottom,
+entrance_pillar.1.1.top,
+entrance_pillar.1.2.bottom,
+entrance_pillar.1.2.top,
+entrance_pillar.2.1.bottom,
+entrance_pillar.2.1.top,
+entrance_pillar.2.2.bottom,
+entrance_pillar.2.2.top,
+entrance_pillar.3.1.bottom,
+entrance_pillar.3.1.top,
+entrance_pillar.3.2.bottom,
+entrance_pillar.3.2.top,
+entrance_pillar.4.1.bottom,
+entrance_pillar.4.1.top,
+entrance_pillar.4.2.bottom,
+entrance_pillar.4.2.top,
+entrance_pillar.5.1.bottom,
+entrance_pillar.5.1.top,
+entrance_pillar.5.2.bottom,
+entrance_pillar.5.2.top,
+entrance_pillar.6.1.bottom,
+entrance_pillar.6.1.top,
+entrance_pillar.6.2.bottom,
+entrance_pillar.6.2.top,
+entrance_pillar.7.1.bottom,
+entrance_pillar.7.1.top,
+entrance_pillar.7.2.bottom,
+entrance_pillar.7.2.top,
+entrance_pillar.8.1.bottom,
+entrance_pillar.8.1.top,
+entrance_pillar.8.2.bottom,
+entrance_pillar.8.2.top,
+floor_border.1,
+
+// This tile has new dimensions: 16x16 instead of 8x8.
+// No ID change, just review dimensions of tile in all components where present.
+hole
+
+// Manually replace entire target statue with composite placeholder.target_statue
+// When replaced, none of these tiles should exist in components
+bow_target.bottom
+bow_target.top
