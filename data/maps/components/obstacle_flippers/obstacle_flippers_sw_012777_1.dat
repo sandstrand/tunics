@@ -290,33 +290,6 @@ tile{
 
 tile{
   layer = 1,
-  x = 72,
-  y = 32,
-  width = 48,
-  height = 112,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 1,
-  x = 200,
-  y = 96,
-  width = 48,
-  height = 112,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 1,
-  x = 120,
-  y = 96,
-  width = 80,
-  height = 48,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 1,
   x = 208,
   y = 136,
   width = 32,
@@ -614,5 +587,4 @@ jumper{
   direction = 0,
   jump_length = 40,
 }
-
 

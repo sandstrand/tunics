@@ -284,42 +284,6 @@ tile{
   x = 208,
   y = 40,
   width = 32,
-  height = 8,
-  pattern = "waterfall_bottom.n",
-}
-
-tile{
-  layer = 1,
-  x = 72,
-  y = 96,
-  width = 48,
-  height = 112,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 1,
-  x = 200,
-  y = 32,
-  width = 48,
-  height = 112,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 1,
-  x = 120,
-  y = 96,
-  width = 80,
-  height = 48,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 1,
-  x = 208,
-  y = 40,
-  width = 32,
   height = 64,
   pattern = "water.transparent",
 }
@@ -340,6 +304,15 @@ tile{
   width = 160,
   height = 32,
   pattern = "water.transparent",
+}
+
+tile{
+  layer = 1,
+  x = 208,
+  y = 40,
+  width = 32,
+  height = 8,
+  pattern = "waterfall_bottom.n",
 }
 
 wall{
@@ -594,5 +567,4 @@ jumper{
   direction = 0,
   jump_length = 40,
 }
-
 
