@@ -3516,7 +3516,7 @@ tile_pattern{
 tile_pattern{
   id = "high_wall.s",
   ground = "wall",
-  default_layer = 2,
+  default_layer = 1,
   x = 120,
   y = 224,
   width = 16,
@@ -4383,6 +4383,17 @@ tile_pattern{
 }
 
 tile_pattern{
+  id = "placeholder.boss.1",
+  ground = "traversable",
+  default_layer = 1,
+  x = 160,
+  y = 16,
+  width = 48,
+  height = 48,
+  repeat_mode = "none",
+}
+
+tile_pattern{
   id = "placeholder.drapes.e",
   ground = "wall",
   default_layer = 1,
@@ -4814,17 +4825,6 @@ tile_pattern{
   y = 152,
   width = 24,
   height = 32,
-  repeat_mode = "none",
-}
-
-tile_pattern{
-  id = "placeholder.boss.1",
-  ground = "traversable",
-  default_layer = 1,
-  x = 160,
-  y = 16,
-  width = 48,
-  height = 48,
   repeat_mode = "none",
 }
 
