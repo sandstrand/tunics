@@ -6,13 +6,13 @@ local dungeon_styles = {
         floor = {
             scope = 'room',
             {
-                high = { 'floor.a.12.high', 'floor.a.6.high' },
-                low = { 'floor.a.13.low.' },
+                high = { 'floor.12.a.high', 'floor.6.a.high' },
+                low = { 'floor.13.a.low.' },
                 p = 0.75,
             },
             {
-                high = { 'floor.b.12.high', },
-                low = { 'floor.a.13.low', },
+                high = { 'floor.12.b.high', },
+                low = { 'floor.13.a.low', },
                 p = 0.25,
             },
         },
@@ -185,6 +185,7 @@ function styles.choose(current_tier, rng)
             end
         elseif elements.scope == 'room' then
             return function (self, room_name)
+                zentropy.assert(room_name)
                 local seq = rng:refine(current_tier):refine(room_name):seq()
                 local candidate = nil
                 for _, element in ipairs(elements) do

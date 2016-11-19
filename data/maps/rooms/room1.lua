@@ -22,6 +22,8 @@ local room = zentropy.Room:new{
     data_messages=data_messages,
     enemies=zentropy.Room.enemies,
     next_enemy=strategy_factory(rng:refine('enemy'), zentropy.Room.enemies),
+    style=data.style,
+    name=data.name,
 }
 
 function is_special_room(data)

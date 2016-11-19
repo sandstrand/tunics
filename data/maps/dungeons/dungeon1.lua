@@ -78,7 +78,7 @@ if not sol.audio.get_music() then
 	sol.audio.play_music(mapping.get_music(tier))
 end
 
-local solarus_layout = Layout.solarus_mixin(layout:new{rng=layout_rng}, map, mapping)
+local solarus_layout = Layout.solarus_mixin(layout:new{rng=layout_rng, style=mapping}, map)
 solarus_layout:render(puzzle)
 --Layout.print_mixin(layout:new()):render(puzzle)
 

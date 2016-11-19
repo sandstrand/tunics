@@ -34,12 +34,14 @@ function Prng:random(a, b)
 end
 
 function Prng:refine(suffix)
+    --local zentropy = require 'lib/zentropy'
+    --zentropy.assert(suffix)
     return Prng:new{ path = self.path .. '.' .. suffix }
 end
 
 function Prng:ichoose(t, w)
-    local zentropy = require 'lib/zentropy'
-    zentropy.assert(t)
+    --local zentropy = require 'lib/zentropy'
+    --zentropy.assert(t)
     if not self.mwc then
         self:setup_mwc()
     end

@@ -462,6 +462,7 @@ zentropy.Room = Class:new()
 function zentropy.Room:new(o)
     zentropy.assert(o.rng, 'property not found: o.rng')
     zentropy.assert(o.map, 'property not found: o.map')
+    zentropy.assert(o.name, 'property not found: o.name')
     o.mask = o.mask or 0
     o.data_messages = o.data_messages or function () end
     return Class.new(self, o)
@@ -489,7 +490,7 @@ function zentropy.Room:delayed_door(data, dir)
     self.data_messages('component', component_name)
     data.rng = self.rng:refine('component')
     return function ()
-        return self.map:include(0, 0, component_name, data)
+        return self.map:include(0, 0, component_name, data, self.style)
     end
 end
 
@@ -511,13 +512,15 @@ function zentropy.Room:obstacle(data, dir, item)
     end
     local mask2 = self.mask
     self.mask = mask0  -- make sure the obstacle can draw its doors
-    self.map:include(0, 0, component_name, data)
+    data.name = self.name -- make room name spill over to obstacle data
+    self.map:include(0, 0, component_name, data, self.style)
     self.mask = bit32.bor(self.mask, mask2)  -- keep the bits from both obstacle and treasure components
     self.data_messages('component', component_name)
     return true
 end
 
 function zentropy.Room:filler(n)
+    zentropy.assert(self.style)
     local rng = self.rng:refine('filler_' .. n)
     local component_name, component_mask = zentropy.components:get_filler(self.mask, rng)
     if component_name then
@@ -525,8 +528,10 @@ function zentropy.Room:filler(n)
             rng=rng:refine('component'),
             doors={},
             room=self,
+            style=self.style,
+            name=self.name,
         }
-        self.map:include(0, 0, component_name, filler_data)
+        self.map:include(0, 0, component_name, filler_data, self.style)
         self.mask = bit32.bor(self.mask, component_mask)
         self.data_messages('component', component_name)
         return true
@@ -542,8 +547,9 @@ function zentropy.Room:trap(open_doors)
             rng=rng:refine('component'),
             doors = open_doors,
             room = self,
+            name=self.name,
         }
-        self.map:include(0, 0, component_name, filler_data)
+        self.map:include(0, 0, component_name, filler_data, self.style)
         self.mask = bit32.bor(self.mask, component_mask)
         self.data_messages('component', component_name)
         return true
@@ -554,6 +560,7 @@ end
 
 function zentropy.Room:treasure(treasure_data)
     zentropy.assert(not treasure_data.see)
+    zentropy.assert(self.style)
     local rng = self.rng:refine('treasure')
     local component_name, component_mask = zentropy.components:get_treasure(treasure_data.open, self.mask, rng)
     if not component_name then
@@ -562,7 +569,7 @@ function zentropy.Room:treasure(treasure_data)
     end
     treasure_data.section = component_mask
     treasure_data.rng = rng:refine('component')
-    self.map:include(0, 0, component_name, treasure_data)
+    self.map:include(0, 0, component_name, treasure_data, self.style)
     self.mask = bit32.bor(self.mask, component_mask)
     self.data_messages('component', component_name)
     return true
@@ -570,7 +577,7 @@ end
 
 function zentropy.Room:enemy(data)
     local component_name, component_mask = zentropy.components:get_enemy(data.name, self.mask, self.rng:refine('enemy'))
-    self.map:include(0, 0, component_name, data)
+    self.map:include(0, 0, component_name, data, self.style)
     self.mask = bit32.bor(self.mask, component_mask)
     return true
 end
@@ -581,7 +588,7 @@ function zentropy.Room:sign(data)
         if bit32.band(self.mask, section) == 0 then
             local component_name = string.format('components/sign')
             data.section = section
-            self.map:include(0, 0, component_name, data)
+            self.map:include(0, 0, component_name, data, self.style)
             self.mask = bit32.bor(self.mask, section)
             self.data_messages('component', component_name)
             return true

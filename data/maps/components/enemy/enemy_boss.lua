@@ -3,8 +3,9 @@ local util = require 'lib/util'
 local enemy_boss = {}
 
 function enemy_boss.init(map, data)
-    local boss_exit = map:include(0, 0, 'components/door/door_exit_n_200000_1', {room_events=data.room_events, name="boss_exit"})
-    local boss_entrance = map:include(0, 0, 'components/door/door_bigkey_s_002000_1', {room_events=data.room_events, name="boss_entrance"})
+    zentropy.assert(map:get_style())
+    local boss_exit = map:include(0, 0, 'components/door/door_exit_n_200000_1', {room_events=data.room_events, style=data.style, name="boss_exit"}, map:get_style())
+    local boss_entrance = map:include(0, 0, 'components/door/door_bigkey_s_002000_1', {room_events=data.room_events, style=data.style, name="boss_entrance"}, map:get_style())
 
     enemy_boss.init_agahnim(map:get_entity("agahnim"), boss_exit)
 
