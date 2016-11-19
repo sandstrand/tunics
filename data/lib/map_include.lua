@@ -189,9 +189,7 @@ function mapmeta:include(x, y, name, data, style)
         if key == 'tile' then
             method = function (self, properties)
                 if properties.pattern and string.sub(properties.pattern, 1, 12) == 'placeholder.' then
-                    print(properties.pattern)
                     if properties.pattern == 'placeholder.floor.high' then
-                        print("room name", data.name)
                         properties.pattern = style:get_high_floor(data.name)
                     end
                 end

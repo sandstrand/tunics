@@ -189,7 +189,6 @@ function styles.choose(current_tier, rng)
                 local seq = rng:refine(current_tier):refine(room_name):seq()
                 local candidate = nil
                 for _, element in ipairs(elements) do
-                    print("element", element.p)
                     if seq(element.p or 1.0) then
                         candidate = element
                     end
