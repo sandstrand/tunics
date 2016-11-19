@@ -4,6 +4,41 @@ local util = require 'lib/util'
 local zentropy = require 'lib/zentropy'
 
 function bow.init(map, data, timeout)
+    local placeholder = map:get_entity('switch')
+    local x, y, layer = placeholder:get_position()
+    local name = placeholder:get_name()
+    placeholder:remove()
+
+    map:create_dynamic_tile({
+        layer=layer,
+        x=x,
+        y=y,
+        pattern='target_statue_top',
+        width=32,
+        height=16,
+        enabled_at_start=true,
+    })
+
+    map:create_dynamic_tile({
+        layer=layer,
+        x=x,
+        y=y+16,
+        pattern='target_statue_bottom',
+        width=32,
+        height=16,
+        enabled_at_start=true,
+    })
+
+    map:create_switch({
+        layer=layer,
+        x=x+8,
+        y=y+16,
+        name=name,
+        subtype='arrow_target',
+        needs_block=false,
+        inactivate_when_leaving=false,
+    })
+
     local doors = {}
     for dir, door_data in util.pairs_by_keys(data.doors) do
         assert((door_data.open or 'open') == 'open')
