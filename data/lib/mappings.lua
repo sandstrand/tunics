@@ -58,7 +58,7 @@ local dungeon_styles = {
         },
         entrance_statue = {
             scope = 'dungeon',
-            { 'entrance_statue.4' },
+            { 'entrance_pillar.4' },
         },
         music = {
             scope = 'dungeon',
