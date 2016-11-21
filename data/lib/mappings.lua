@@ -6,13 +6,13 @@ local dungeon_styles = {
         floor = {
             scope = 'room',
             {
-                high = { 'floor.a.12.high', 'floor.a.6.high' },
-                low = { 'floor.a.13.low.' },
+                high = { 'floor.12.a.high', 'floor.6.a.high' },
+                low = { 'floor.13.a.low.' },
                 p = 0.75,
             },
             {
-                high = { 'floor.b.12.high', },
-                low = { 'floor.a.13.low', },
+                high = { 'floor.12.b.high', },
+                low = { 'floor.13.a.low', },
                 p = 0.25,
             },
         },
@@ -58,7 +58,7 @@ local dungeon_styles = {
         },
         entrance_statue = {
             scope = 'dungeon',
-            { 'entrance_statue.4' },
+            { 'entrance_pillar.4' },
         },
         music = {
             scope = 'dungeon',
@@ -161,30 +161,39 @@ function get_complexity(current_tier)
     return result
 end
 
-local mappings = {}
+local styles = {}
 
-function mappings.choose(current_tier, rng)
-    function scoped(elements, rng)
+function styles.choose(current_tier, rng)
+
+    function ident(elements)
+        return elements
+    end
+
+    function scoped(elements, rng, f)
+        f = f or ident
         if elements.scope == 'dungeon' then
-            return function (tier, room_name)
-                local seq = rng:refine(tier):seq()
-                local result = nil
+            return function (self, room_name)
+                local seq = rng:refine(current_tier):seq()
+                local candidate = nil
                 for _, element in ipairs(elements) do
                     if seq(element.p or 1.0) then
-                        _, result = rng:ichoose(element)
+                        candidate = element
                     end
                 end
+                local _, result = rng:ichoose(f(candidate))
                 return result
             end
         elseif elements.scope == 'room' then
-            return function (tier, room_name)
-                local seq = rng:refine(tier):refine(room_name):seq()
-                local result = nil
+            return function (self, room_name)
+                zentropy.assert(room_name)
+                local seq = rng:refine(current_tier):refine(room_name):seq()
+                local candidate = nil
                 for _, element in ipairs(elements) do
                     if seq(element.p or 1.0) then
-                        _, result = rng:ichoose(element)
+                        candidate = element
                     end
                 end
+                local _, result = rng:ichoose(f(candidate))
                 return result
             end
         else
@@ -195,25 +204,26 @@ function mappings.choose(current_tier, rng)
     local style = choose_style(current_tier, rng:refine('style'))
     local enemies = get_enemies(current_tier)
     local complexity = get_complexity(current_tier)
-    local mappings = {
+    local styles = {
         tileset=style.tileset,
         destructibles=style.destructibles,
         enemies=enemies,
         complexity=complexity,
+        get_high_floor = scoped(style.floor, rng:refine('floor'), function (candidate) return candidate.high end ),
+        get_low_floor = scoped(style.floor, rng:refine('floor'), function (candidate) return candidate.low end ),
+        get_wall_pillars = scoped(style.wall_pillars, rng:refine('wall_pillars')),
+        get_drapes = scoped(style.drapes, rng:refine('drapes')),
+        get_statues = scoped(style.statues, rng:refine('statues')),
+        get_wall_statues = scoped(style.wall_statues, rng:refine('wall_statues')),
+        get_barrier = scoped(style.barrier, rng:refine('barrier')),
+        get_hole = scoped(style.hole, rng:refine('hole')),
+        get_big_barrier = scoped(style.big_barrier, rng:refine('big_barrier')),
+        get_stage = scoped(style.stage, rng:refine('stage')),
+        get_entrance = scoped(style.entrance, rng:refine('entrance')),
+        get_entrance_statue = scoped(style.entrance_statue, rng:refine('entrance_statue')),
+        get_music = scoped(style.music, rng:refine('music')),
     }
-    mappings.get_floor = scoped(style.floor, rng:refine('floor'))
-    mappings.get_wall_pillars = scoped(style.wall_pillars, rng:refine('wall_pillars'))
-    mappings.get_drapes = scoped(style.drapes, rng:refine('drapes'))
-    mappings.get_statues = scoped(style.statues, rng:refine('statues'))
-    mappings.get_wall_statues = scoped(style.wall_statues, rng:refine('wall_statues'))
-    mappings.get_barrier = scoped(style.barrier, rng:refine('barrier'))
-    mappings.get_hole = scoped(style.hole, rng:refine('hole'))
-    mappings.get_big_barrier = scoped(style.big_barrier, rng:refine('big_barrier'))
-    mappings.get_stage = scoped(style.stage, rng:refine('stage'))
-    mappings.get_entrance = scoped(style.entrance, rng:refine('entrance'))
-    mappings.get_entrance_statue = scoped(style.entrance_statue, rng:refine('entrance_statue'))
-    mappings.get_music = scoped(style.music, rng:refine('music'))
-    return mappings
+    return styles
 end
 
-return mappings
+return styles

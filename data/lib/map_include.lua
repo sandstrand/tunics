@@ -2,7 +2,8 @@ local util = require 'lib/util'
 
 local mapmeta = sol.main.get_metatable('map')
 
-local function component_map(map_userdata, component_x, component_y, component_prefix, data)
+local function component_map(map_userdata, component_x, component_y, component_prefix, data, style)
+    zentropy.assert(style)
     local o = {}
 
     local component_entity = function (entity_userdata)
@@ -143,11 +144,14 @@ local function component_map(map_userdata, component_x, component_y, component_p
     function o:get_entities_in_rectangle(x, y, width, height)
         return map_userdata:get_entities_in_rectangle(x + component_x, y + component_y, width, height)
     end
-    function o:include(x, y, name, data)
-        return map_userdata:include(x + component_x, y + component_y, name, data)
+    function o:include(x, y, name, data, style)
+        return map_userdata:include(x + component_x, y + component_y, name, data, style)
     end
     function o:get_userdata()
         return map_userdata;
+    end
+    function o:get_style()
+        return style
     end
     setmetatable(o, {
         __index = function (table, key)
@@ -164,11 +168,14 @@ end
 
 local counter = 0
 
-function mapmeta:include(x, y, name, data)
+function mapmeta:include(x, y, name, data, style)
+    zentropy.assert(style)
+    zentropy.assert(data.name)
+
     local component_prefix = string.format('__include_%d_', counter)
     counter = counter + 1
 
-    local map = component_map(self, x, y, component_prefix, data)
+    local map = component_map(self, x, y, component_prefix, data, style)
     local datfile = string.format('maps/%s.dat', name)
     local datf = sol.main.load_file(datfile)
     if not datf then
@@ -180,7 +187,14 @@ function mapmeta:include(x, y, name, data)
         end
         local method
         if key == 'tile' then
-            method = map.create_dynamic_tile
+            method = function (self, properties)
+                if properties.pattern and string.sub(properties.pattern, 1, 12) == 'placeholder.' then
+                    if properties.pattern == 'placeholder.floor.high' then
+                        properties.pattern = style:get_high_floor(data.name)
+                    end
+                end
+                return self:create_dynamic_tile(properties)
+            end
         else
             method = map['create_' .. key]
         end

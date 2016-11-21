@@ -500,7 +500,7 @@ function Layout.minimap_mixin(object, map_menu)
     return object
 end
 
-function Layout.solarus_mixin(object, map, floors)
+function Layout.solarus_mixin(object, map)
 
     local map_width, map_height = map:get_size()
     local current_map_x, current_map_y = nil, nil
@@ -572,12 +572,14 @@ function Layout.solarus_mixin(object, map, floors)
             self:separator(map_x+1, map_y, 'west')
 
             local room_rng=self.rng:refine('room_' .. map_x .. '_' .. map_y)
+            local room_name = self:room_name(depth, leaf)
             local map_info = {
-                name=self:room_name(depth, leaf),
+                name=room_name,
                 doors={},
                 treasures={},
                 enemies=info.enemies,
                 rng=room_rng,
+                style=self.style,
             }
             local doors = {}
             for native_dir, native_door in pairs(info.doors) do
@@ -598,8 +600,8 @@ function Layout.solarus_mixin(object, map, floors)
             end
 
             local x, y = 320 * map_x, 240 * map_y
-            map:include(x, y, floors[room_rng:refine('floor'):random(#floors)], {})
-            map:include(x, y, 'rooms/room1', map_info)
+
+            map:include(x, y, 'rooms/room1', map_info, self.style)
         end)
     end
 
