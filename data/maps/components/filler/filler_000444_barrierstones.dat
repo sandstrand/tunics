@@ -11,6 +11,114 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 112,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.nw",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.sw",
+}
+
+tile{
+  layer = 1,
   x = 88,
   y = 72,
   width = 8,
@@ -37,69 +145,95 @@ tile{
 }
 
 dynamic_tile{
+  name = "stone_1",
   layer = 1,
   x = 72,
   y = 72,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_1",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_2",
   layer = 1,
   x = 72,
   y = 88,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_2",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_3",
   layer = 1,
   x = 72,
   y = 104,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_3",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_4",
   layer = 1,
   x = 72,
   y = 120,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_4",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_5",
   layer = 1,
   x = 72,
   y = 136,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_5",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_6",
   layer = 1,
   x = 72,
   y = 152,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_6",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
 

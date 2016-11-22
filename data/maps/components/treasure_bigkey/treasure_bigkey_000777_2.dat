@@ -11,6 +11,51 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 272,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 64,
+  width = 8,
+  height = 112,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 32,
+  width = 192,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 200,
+  width = 192,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 64,
+  width = 8,
+  height = 112,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
   x = 8,
   y = 8,
   width = 32,
@@ -738,102 +783,174 @@ tile{
   pattern = "wall_border_outer_corner.high.se",
 }
 
+tile{
+  layer = 1,
+  x = 64,
+  y = 8,
+  width = 64,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 8,
+  width = 64,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 64,
+  width = 24,
+  height = 32,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 32,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 64,
+  width = 24,
+  height = 32,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 144,
+  width = 24,
+  height = 32,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 208,
+  width = 64,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 208,
+  width = 64,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
 dynamic_tile{
+  name = "chest",
   layer = 1,
   x = 144,
   y = 104,
+  pattern = "placeholder.big_chest",
   width = 32,
   height = 24,
-  name = "chest",
-  pattern = "placeholder.big_chest",
   enabled_at_start = true,
 }
 
 dynamic_tile{
-  layer = 1,
-  x = 88,
-  y = 40,
-  width = 16,
-  height = 16,
   name = "pot_1",
+  layer = 1,
+  x = 88,
+  y = 40,
   pattern = "placeholder.pot",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_4",
   layer = 1,
   x = 216,
   y = 40,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_4",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_5",
   layer = 1,
   x = 88,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_5",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_8",
   layer = 1,
   x = 216,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_8",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
-  layer = 1,
-  x = 104,
-  y = 40,
-  width = 16,
-  height = 16,
   name = "pot_2",
+  layer = 1,
+  x = 104,
+  y = 40,
   pattern = "placeholder.pot",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_3",
   layer = 1,
   x = 200,
   y = 40,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_3",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_6",
   layer = 1,
   x = 104,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_6",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_7",
   layer = 1,
   x = 200,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_7",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
@@ -841,7 +958,6 @@ block{
   layer = 1,
   x = 48,
   y = 85,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -852,7 +968,6 @@ block{
   layer = 1,
   x = 64,
   y = 69,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -863,7 +978,6 @@ block{
   layer = 1,
   x = 80,
   y = 53,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -874,7 +988,6 @@ block{
   layer = 1,
   x = 240,
   y = 53,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -885,7 +998,6 @@ block{
   layer = 1,
   x = 256,
   y = 69,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -896,7 +1008,6 @@ block{
   layer = 1,
   x = 272,
   y = 85,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -907,7 +1018,6 @@ block{
   layer = 1,
   x = 272,
   y = 165,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -918,7 +1028,6 @@ block{
   layer = 1,
   x = 256,
   y = 181,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -929,7 +1038,6 @@ block{
   layer = 1,
   x = 240,
   y = 197,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -940,7 +1048,6 @@ block{
   layer = 1,
   x = 80,
   y = 197,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -951,7 +1058,6 @@ block{
   layer = 1,
   x = 64,
   y = 181,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
@@ -962,11 +1068,45 @@ block{
   layer = 1,
   x = 48,
   y = 165,
-  direction = -1,
   sprite = "entities/statue",
   pushable = false,
   pullable = false,
   maximum_moves = 1,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
 

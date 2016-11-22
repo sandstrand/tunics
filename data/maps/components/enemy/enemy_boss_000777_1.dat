@@ -11,28 +11,37 @@ properties{
 
 tile{
   layer = 1,
+  x = 56,
+  y = 24,
+  width = 208,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
   x = 256,
-  y = 8,
-  width = 56,
-  height = 224,
+  y = 0,
+  width = 64,
+  height = 240,
   pattern = "ceiling",
 }
 
 tile{
   layer = 1,
-  x = 8,
-  y = 8,
-  width = 56,
-  height = 224,
+  x = 0,
+  y = 0,
+  width = 64,
+  height = 240,
   pattern = "ceiling",
 }
 
 tile{
   layer = 1,
   x = 216,
-  y = 8,
+  y = 0,
   width = 40,
-  height = 40,
+  height = 48,
   pattern = "ceiling",
 }
 
@@ -41,7 +50,7 @@ tile{
   x = 216,
   y = 192,
   width = 40,
-  height = 40,
+  height = 48,
   pattern = "ceiling",
 }
 
@@ -50,16 +59,16 @@ tile{
   x = 64,
   y = 192,
   width = 40,
-  height = 40,
+  height = 48,
   pattern = "ceiling",
 }
 
 tile{
   layer = 1,
   x = 64,
-  y = 8,
+  y = 0,
   width = 40,
-  height = 40,
+  height = 48,
   pattern = "ceiling",
 }
 
@@ -657,47 +666,82 @@ tile{
   pattern = "wall_border.high.e",
 }
 
+tile{
+  layer = 1,
+  x = 112,
+  y = 32,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 112,
+  y = 200,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
 enemy{
+  name = "agahnim",
   layer = 1,
   x = 160,
   y = 141,
-  name = "agahnim",
   direction = 3,
   breed = "agahnim",
   savegame_variable = "room_boss",
 }
 
 dynamic_tile{
+  name = "boss_2",
   layer = 1,
   x = 64,
   y = 96,
+  pattern = "placeholder.boss.1",
   width = 48,
   height = 48,
-  name = "boss_2",
-  pattern = "placeholder.boss.1",
   enabled_at_start = false,
 }
 
 dynamic_tile{
+  name = "boss_1",
   layer = 1,
   x = 136,
   y = 40,
+  pattern = "placeholder.boss.1",
   width = 48,
   height = 48,
-  name = "boss_1",
-  pattern = "placeholder.boss.1",
   enabled_at_start = false,
 }
 
 dynamic_tile{
+  name = "boss_3",
   layer = 1,
   x = 208,
   y = 96,
+  pattern = "placeholder.boss.1",
   width = 48,
   height = 48,
-  name = "boss_3",
-  pattern = "placeholder.boss.1",
   enabled_at_start = false,
 }
 
+tile{
+  layer = 2,
+  x = 104,
+  y = 232,
+  width = 112,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 104,
+  y = 0,
+  width = 112,
+  height = 8,
+  pattern = "ceiling",
+}
 

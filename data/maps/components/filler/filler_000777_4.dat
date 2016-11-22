@@ -10,12 +10,66 @@ properties{
 }
 
 tile{
+  layer = 0,
+  x = 32,
+  y = 32,
+  width = 264,
+  height = 184,
+  pattern = "hole",
+}
+
+tile{
+  layer = 1,
+  x = 24,
+  y = 72,
+  width = 272,
+  height = 96,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 72,
+  y = 24,
+  width = 176,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
   layer = 1,
   x = 32,
-  y = 168,
-  width = 40,
-  height = 40,
-  pattern = "hole",
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
 }
 
 tile{
@@ -43,33 +97,6 @@ tile{
   width = 16,
   height = 24,
   pattern = "chasm_wall.w",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 32,
-  width = 40,
-  height = 40,
-  pattern = "hole",
-}
-
-tile{
-  layer = 1,
-  x = 248,
-  y = 32,
-  width = 40,
-  height = 40,
-  pattern = "hole",
-}
-
-tile{
-  layer = 1,
-  x = 248,
-  y = 168,
-  width = 40,
-  height = 40,
-  pattern = "hole",
 }
 
 tile{
@@ -414,37 +441,180 @@ tile{
   pattern = "placeholder.big_barrier.2",
 }
 
+tile{
+  layer = 1,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.ne",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.se",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 72,
+  width = 8,
+  height = 96,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 72,
+  width = 8,
+  height = 96,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 72,
+  y = 200,
+  width = 176,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 72,
+  y = 32,
+  width = 176,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
 dynamic_tile{
+  name = "enemy_1",
   layer = 1,
   x = 40,
   y = 104,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_1",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_2",
   layer = 1,
   x = 248,
   y = 104,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_2",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_3",
   layer = 1,
   x = 144,
   y = 80,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_3",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
 

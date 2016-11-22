@@ -10,12 +10,147 @@ properties{
 }
 
 tile{
-  layer = 1,
+  layer = 0,
   x = 56,
   y = 56,
   width = 208,
-  height = 48,
+  height = 128,
   pattern = "hole",
+}
+
+tile{
+  layer = 1,
+  x = 24,
+  y = 24,
+  width = 272,
+  height = 32,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 256,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 24,
+  y = 56,
+  width = 32,
+  height = 128,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 264,
+  y = 56,
+  width = 32,
+  height = 128,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 24,
+  y = 184,
+  width = 272,
+  height = 32,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 104,
+  width = 16,
+  height = 32,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 248,
+  y = 104,
+  width = 16,
+  height = 32,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 136,
+  y = 168,
+  width = 48,
+  height = 16,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 8,
+  width = 256,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
 }
 
 tile{
@@ -25,33 +160,6 @@ tile{
   width = 80,
   height = 40,
   pattern = "carpet_border",
-}
-
-tile{
-  layer = 1,
-  x = 184,
-  y = 136,
-  width = 80,
-  height = 48,
-  pattern = "hole",
-}
-
-tile{
-  layer = 1,
-  x = 56,
-  y = 136,
-  width = 80,
-  height = 48,
-  pattern = "hole",
-}
-
-tile{
-  layer = 1,
-  x = 72,
-  y = 80,
-  width = 176,
-  height = 88,
-  pattern = "hole",
 }
 
 tile{
@@ -504,14 +612,113 @@ tile{
   pattern = "chasm_wall.e",
 }
 
+tile{
+  layer = 1,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.ne",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.se",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 256,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.nw",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.ne",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.sw",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.se",
+}
+
 dynamic_tile{
+  name = "door_open",
   layer = 1,
   x = 152,
   y = 16,
+  pattern = "door_floor.n",
   width = 16,
   height = 16,
-  name = "door_open",
-  pattern = "door_floor.n",
   enabled_at_start = true,
 }
 
@@ -525,12 +732,12 @@ wall{
 }
 
 sensor{
+  name = "sensor",
   layer = 1,
   x = 160,
   y = 45,
   width = 16,
   height = 16,
-  name = "sensor",
 }
 
 stream{
@@ -580,4 +787,39 @@ tile{
   pattern = "boss_entrance_pillar.r.top",
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
 

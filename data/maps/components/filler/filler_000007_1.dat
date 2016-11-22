@@ -11,6 +11,51 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 136,
+  width = 272,
+  height = 80,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 256,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 256,
+  y = 200,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 128,
+  y = 200,
+  width = 64,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
   x = 80,
   y = 160,
   width = 32,
@@ -333,70 +378,168 @@ tile{
   pattern = "ceiling",
 }
 
-dynamic_tile{
+tile{
   layer = 1,
-  x = 264,
-  y = 168,
-  width = 16,
-  height = 16,
+  x = 32,
+  y = 144,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 144,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.sw",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.se",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.se",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+dynamic_tile{
   name = "pot_1",
+  layer = 1,
+  x = 264,
+  y = 168,
   pattern = "placeholder.pot",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_2",
   layer = 1,
   x = 264,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_2",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_3",
   layer = 1,
   x = 40,
   y = 168,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_3",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_4",
   layer = 1,
   x = 40,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_4",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_",
   layer = 1,
   x = 32,
   y = 136,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_2",
   layer = 1,
   x = 256,
   y = 136,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_2",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 136,
+  width = 8,
+  height = 96,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 136,
+  width = 8,
+  height = 96,
+  pattern = "ceiling",
+}
 

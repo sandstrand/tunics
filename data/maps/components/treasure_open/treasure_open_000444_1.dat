@@ -11,6 +11,15 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 112,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
   x = 56,
   y = 40,
   width = 64,
@@ -47,20 +56,101 @@ tile{
 
 tile{
   layer = 1,
-  x = 64,
+  x = 32,
   y = 32,
-  width = 48,
+  width = 96,
   height = 8,
   pattern = "wall_border.high.n",
 }
 
 tile{
   layer = 1,
-  x = 64,
+  x = 32,
   y = 200,
-  width = 48,
+  width = 96,
   height = 8,
   pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.sw",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.nw",
 }
 
 dynamic_tile{
@@ -96,4 +186,30 @@ dynamic_tile{
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
 

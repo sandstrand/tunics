@@ -11,6 +11,69 @@ properties{
 
 tile{
   layer = 1,
+  x = 184,
+  y = 24,
+  width = 112,
+  height = 80,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.ne",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 32,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.ne",
+}
+
+tile{
+  layer = 1,
   x = 216,
   y = 56,
   width = 32,
@@ -19,47 +82,64 @@ tile{
 }
 
 dynamic_tile{
-  layer = 1,
-  x = 200,
-  y = 56,
-  width = 16,
-  height = 16,
   name = "stone_5",
+  layer = 1,
+  x = 200,
+  y = 56,
   pattern = "placeholder.stone",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_2",
   layer = 1,
   x = 200,
   y = 72,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_2",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_3",
   layer = 1,
   x = 248,
   y = 72,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_3",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_4",
   layer = 1,
   x = 248,
   y = 56,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_4",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 184,
+  y = 0,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 96,
+  pattern = "ceiling",
+}
 

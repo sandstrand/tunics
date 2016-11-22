@@ -1,0 +1,37 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "dungeon.tower_of_hera",
+}
+
+tile{
+  layer = 1,
+  x = 24,
+  y = 104,
+  width = 112,
+  height = 32,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 112,
+  width = 8,
+  height = 16,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 104,
+  width = 8,
+  height = 32,
+  pattern = "ceiling",
+}
+

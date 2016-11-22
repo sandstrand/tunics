@@ -11,6 +11,15 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 272,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
   x = 136,
   y = 104,
   width = 64,
@@ -81,11 +90,191 @@ tile{
   pattern = "block",
 }
 
-switch{
+tile{
   layer = 1,
-  x = 0,
-  y = 0,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.se",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.ne",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 256,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 256,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.nw",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.sw",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.se",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.ne",
+}
+
+switch{
   name = "switch",
+  layer = 1,
+  x = -8,
+  y = -8,
   subtype = "walkable",
   sprite = "entities/switch",
   needs_block = false,
@@ -93,201 +282,236 @@ switch{
 }
 
 dynamic_tile{
-  layer = 1,
-  x = 248,
-  y = 40,
-  width = 16,
-  height = 16,
   name = "pot_5",
+  layer = 1,
+  x = 248,
+  y = 40,
   pattern = "placeholder.pot",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_2",
   layer = 1,
   x = 264,
   y = 40,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_2",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_3",
   layer = 1,
   x = 248,
   y = 56,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_3",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_4",
   layer = 1,
   x = 264,
   y = 56,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_4",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_7",
   layer = 1,
   x = 40,
   y = 136,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_7",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_5",
   layer = 1,
   x = 248,
   y = 136,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_5",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_8",
   layer = 1,
   x = 200,
   y = 40,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_8",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_9",
   layer = 1,
   x = 88,
   y = 40,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_9",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "treasure_obstacle_chest",
   layer = 1,
   x = 248,
   y = 72,
-  width = 16,
-  height = 16,
-  name = "treasure_obstacle_chest",
   pattern = "placeholder.treasure_puzzle",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
-  layer = 1,
-  x = 56,
-  y = 40,
-  width = 16,
-  height = 16,
   name = "pot_6",
+  layer = 1,
+  x = 56,
+  y = 40,
   pattern = "placeholder.pot",
+  width = 16,
+  height = 16,
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_7",
   layer = 1,
   x = 40,
   y = 56,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_7",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_8",
   layer = 1,
   x = 40,
   y = 40,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_8",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_9",
   layer = 1,
   x = 56,
   y = 56,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_9",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_10",
   layer = 1,
   x = 40,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_10",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_11",
   layer = 1,
   x = 56,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_11",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_12",
   layer = 1,
   x = 248,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_12",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_13",
   layer = 1,
   x = 264,
   y = 184,
+  pattern = "placeholder.pot",
   width = 16,
   height = 16,
-  name = "pot_13",
-  pattern = "placeholder.pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "treasure_open_chest",
   layer = 1,
   x = 56,
   y = 72,
+  pattern = "placeholder.treasure_open",
   width = 16,
   height = 16,
-  name = "treasure_open_chest",
-  pattern = "placeholder.treasure_open",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
 

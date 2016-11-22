@@ -11,6 +11,51 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 272,
+  height = 192,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 128,
+  y = 200,
+  width = 64,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
+  x = 128,
+  y = 32,
+  width = 64,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 96,
+  width = 8,
+  height = 48,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 96,
+  width = 8,
+  height = 48,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
   x = 216,
   y = 88,
   width = 16,
@@ -550,36 +595,71 @@ tile{
 }
 
 dynamic_tile{
+  name = "enemy_1",
   layer = 1,
   x = 96,
   y = 104,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_1",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_2",
   layer = 1,
   x = 192,
   y = 104,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_2",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "enemy_3",
   layer = 1,
   x = 144,
   y = 104,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_3",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 224,
+  pattern = "ceiling",
+}
 
