@@ -15,24 +15,24 @@ function bow.init(map, data, timeout)
         y=y,
         pattern='target_statue_top',
         width=32,
-        height=16,
+        height=24,
         enabled_at_start=true,
     })
 
     map:create_dynamic_tile({
         layer=layer,
         x=x,
-        y=y+16,
+        y=y+24,
         pattern='target_statue_bottom',
         width=32,
-        height=16,
+        height=8,
         enabled_at_start=true,
     })
 
     map:create_switch({
         layer=layer,
         x=x+8,
-        y=y+16,
+        y=y+8,
         name=name,
         subtype='arrow_target',
         needs_block=false,

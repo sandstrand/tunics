@@ -5576,12 +5576,12 @@ tile_pattern{
 
 tile_pattern{
   id = "target_statue_bottom",
-  ground = "wall",
+  ground = "low_wall",
   default_layer = 1,
   x = 224,
-  y = 496,
+  y = 504,
   width = 32,
-  height = 16,
+  height = 8,
   repeat_mode = "none",
 }
 
@@ -5592,7 +5592,7 @@ tile_pattern{
   x = 224,
   y = 464,
   width = 32,
-  height = 16,
+  height = 24,
   repeat_mode = "none",
 }
 
