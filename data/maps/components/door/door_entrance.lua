@@ -48,13 +48,13 @@ function door_entrance.init(map, data, direction)
     })
 
     local style = map:get_style()
-    local entrance_statue_prefix = style:get_entrance_statue(data.name)
+    local entrance_pillar_prefix = style.entrance_pillar
 
     map:create_dynamic_tile({
         layer=layer,
         x=x,
         y=y+16,
-        pattern=entrance_statue_prefix .. '.r.bottom',
+        pattern=entrance_pillar_prefix .. '.r.bottom',
         width=24,
         height=24,
         enabled_at_start=true,
@@ -64,7 +64,7 @@ function door_entrance.init(map, data, direction)
         layer=layer+1,
         x=x,
         y=y+40,
-        pattern=entrance_statue_prefix .. '.r.top',
+        pattern=entrance_pillar_prefix .. '.r.top',
         width=24,
         height=8,
         enabled_at_start=true,
@@ -74,7 +74,7 @@ function door_entrance.init(map, data, direction)
         layer=layer,
         x=x+56,
         y=y+16,
-        pattern=entrance_statue_prefix .. '.l.bottom',
+        pattern=entrance_pillar_prefix .. '.l.bottom',
         width=24,
         height=24,
         enabled_at_start=true,
@@ -84,7 +84,7 @@ function door_entrance.init(map, data, direction)
         layer=layer+1,
         x=x+56,
         y=y+40,
-        pattern=entrance_statue_prefix .. '.l.top',
+        pattern=entrance_pillar_prefix .. '.l.top',
         width=24,
         height=8,
         enabled_at_start=true,

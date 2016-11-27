@@ -50,9 +50,7 @@ for i = 1, tier - 1 do
     end
 end
 
-local floor1, floor2 = zentropy.components:get_floors(presentation_rng:refine('floors'))
-
-local mapping = mappings.choose(tier, presentation_rng:refine('mappings'))
+local mapping = mappings.choose(tier, presentation_rng:refine('mapping'))
 zentropy.Room.enemies = mapping.enemies
 zentropy.Room.destructibles = mapping.destructibles
 zentropy.Room.enemy_ratio = get_enemy_ratio(tier)
@@ -61,6 +59,7 @@ local nkeys = zentropy.settings.tier_keys or mapping.complexity.keys
 local nfairies = zentropy.settings.tier_fairies or mapping.complexity.fairies
 local nculdesacs = zentropy.settings.tier_culdesacs or mapping.complexity.culdesacs
 local max_heads = zentropy.settings.tier_max_heads or mapping.complexity.max_heads
+local style = mapping.style_builder:get_elect()
 
 local step_deps = Quest.outline_graph(puzzle_rng, nkeys, nfairies, nculdesacs, treasure_items)
 local steps = Quest.sequence(puzzle_rng:refine('steps'), step_deps)
@@ -75,10 +74,10 @@ end
 
 
 if not sol.audio.get_music() then 
-	sol.audio.play_music(mapping.get_music(tier))
+	sol.audio.play_music(style.music)
 end
 
-local solarus_layout = Layout.solarus_mixin(layout:new{rng=layout_rng, style=mapping}, map)
+local solarus_layout = Layout.solarus_mixin(layout:new{rng=layout_rng, style=mapping.style_builder}, map)
 solarus_layout:render(puzzle)
 --Layout.print_mixin(layout:new()):render(puzzle)
 

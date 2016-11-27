@@ -1,3 +1,6 @@
+local StyleBuilder = require 'lib/stylebuilder.lua'
+local Prng = require 'lib/prng.lua'
+
 local dungeon_styles = {
     {
         -- palette = 'dungeon.tower_of_hera.1';
@@ -56,7 +59,7 @@ local dungeon_styles = {
             scope = 'dungeon',
             { 'entrance.1' },
         },
-        entrance_statue = {
+        entrance_pillar = {
             scope = 'dungeon',
             { 'entrance_pillar.4' },
         },
@@ -201,6 +204,13 @@ function styles.choose(current_tier, rng)
         end
     end
 
+    local style_rng = Prng:new{ path=zentropy.game.get_seed() }:refine('style')
+    local style_builder = StyleBuilder.new(style_rng)
+    for _, v in ipairs(dungeon_styles) do
+        style_builder:add_mapping(v)
+    end
+    style_builder = style_builder:dungeon(current_tier)
+
     local style = choose_style(current_tier, rng:refine('style'))
     local enemies = get_enemies(current_tier)
     local complexity = get_complexity(current_tier)
@@ -209,19 +219,7 @@ function styles.choose(current_tier, rng)
         destructibles=style.destructibles,
         enemies=enemies,
         complexity=complexity,
-        get_high_floor = scoped(style.floor, rng:refine('floor'), function (candidate) return candidate.high end ),
-        get_low_floor = scoped(style.floor, rng:refine('floor'), function (candidate) return candidate.low end ),
-        get_wall_pillars = scoped(style.wall_pillars, rng:refine('wall_pillars')),
-        get_drapes = scoped(style.drapes, rng:refine('drapes')),
-        get_statues = scoped(style.statues, rng:refine('statues')),
-        get_wall_statues = scoped(style.wall_statues, rng:refine('wall_statues')),
-        get_barrier = scoped(style.barrier, rng:refine('barrier')),
-        get_hole = scoped(style.hole, rng:refine('hole')),
-        get_big_barrier = scoped(style.big_barrier, rng:refine('big_barrier')),
-        get_stage = scoped(style.stage, rng:refine('stage')),
-        get_entrance = scoped(style.entrance, rng:refine('entrance')),
-        get_entrance_statue = scoped(style.entrance_statue, rng:refine('entrance_statue')),
-        get_music = scoped(style.music, rng:refine('music')),
+        style_builder=style_builder,
     }
     return styles
 end

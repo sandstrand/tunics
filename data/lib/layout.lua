@@ -562,6 +562,7 @@ function Layout.solarus_mixin(object, map)
     end
 
     function object:collect_on_finish()
+        zentropy.assert(self.style.room)
         current_map_x, current_map_y = object:pos_from_native(0, 0)
         mark_known_room(current_map_x, current_map_y)
         self:each_room(function (depth, leaf, info)
@@ -573,13 +574,14 @@ function Layout.solarus_mixin(object, map)
 
             local room_rng=self.rng:refine('room_' .. map_x .. '_' .. map_y)
             local room_name = self:room_name(depth, leaf)
+            local style = self.style:room(map_x, map_y):get_elect()
             local map_info = {
                 name=room_name,
                 doors={},
                 treasures={},
                 enemies=info.enemies,
                 rng=room_rng,
-                style=self.style,
+                style=style,
             }
             local doors = {}
             for native_dir, native_door in pairs(info.doors) do
@@ -601,7 +603,7 @@ function Layout.solarus_mixin(object, map)
 
             local x, y = 320 * map_x, 240 * map_y
 
-            map:include(x, y, 'rooms/room1', map_info, self.style)
+            map:include(x, y, 'rooms/room1', map_info, style)
         end)
     end
 
