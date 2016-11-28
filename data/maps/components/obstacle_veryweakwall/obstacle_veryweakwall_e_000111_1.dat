@@ -11,9 +11,9 @@ properties{
 
 tile{
   layer = 1,
-  x = 184,
+  x = 200,
   y = 24,
-  width = 112,
+  width = 96,
   height = 192,
   pattern = "placeholder.floor.high",
 }
@@ -29,9 +29,9 @@ tile{
 
 tile{
   layer = 1,
-  x = 192,
+  x = 208,
   y = 8,
-  width = 96,
+  width = 80,
   height = 24,
   pattern = "high_wall.n",
 }
@@ -47,9 +47,9 @@ tile{
 
 tile{
   layer = 1,
-  x = 192,
+  x = 208,
   y = 32,
-  width = 96,
+  width = 80,
   height = 8,
   pattern = "wall_border.high.n",
 }
@@ -92,18 +92,18 @@ tile{
 
 tile{
   layer = 1,
-  x = 192,
+  x = 208,
   y = 208,
-  width = 96,
+  width = 80,
   height = 24,
   pattern = "high_wall.s",
 }
 
 tile{
   layer = 1,
-  x = 192,
+  x = 208,
   y = 200,
-  width = 96,
+  width = 80,
   height = 8,
   pattern = "wall_border.high.s",
 }
@@ -184,9 +184,9 @@ dynamic_tile{
 
 tile{
   layer = 2,
-  x = 184,
+  x = 192,
   y = 0,
-  width = 136,
+  width = 128,
   height = 8,
   pattern = "ceiling",
 }
@@ -202,9 +202,9 @@ tile{
 
 tile{
   layer = 2,
-  x = 184,
+  x = 192,
   y = 232,
-  width = 136,
+  width = 128,
   height = 8,
   pattern = "ceiling",
 }

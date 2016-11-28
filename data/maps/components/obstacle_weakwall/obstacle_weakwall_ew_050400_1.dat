@@ -14,7 +14,7 @@ tile{
   x = 24,
   y = 24,
   width = 112,
-  height = 96,
+  height = 80,
   pattern = "placeholder.floor.high",
 }
 
@@ -32,7 +32,7 @@ tile{
   x = 8,
   y = 32,
   width = 24,
-  height = 80,
+  height = 64,
   pattern = "high_wall.w",
 }
 
@@ -59,7 +59,7 @@ tile{
   x = 32,
   y = 32,
   width = 8,
-  height = 80,
+  height = 64,
   pattern = "wall_border.high.w",
 }
 
@@ -142,7 +142,7 @@ tile{
   x = 0,
   y = 8,
   width = 8,
-  height = 112,
+  height = 104,
   pattern = "ceiling",
 }
 

@@ -333,24 +333,6 @@ tile{
   pattern = "wall_border_inner_corner.high.nw",
 }
 
-tile{
-  layer = 1,
-  x = 128,
-  y = 8,
-  width = 48,
-  height = 24,
-  pattern = "high_wall.n",
-}
-
-tile{
-  layer = 1,
-  x = 128,
-  y = 208,
-  width = 48,
-  height = 24,
-  pattern = "high_wall.s",
-}
-
 switch{
   name = "switch",
   layer = 1,
