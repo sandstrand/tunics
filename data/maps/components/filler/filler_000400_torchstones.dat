@@ -28,25 +28,24 @@ tile{
 }
 
 dynamic_tile{
+  name = "stone_3",
   layer = 1,
   x = 72,
   y = 56,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_3",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "stone_2",
   layer = 1,
   x = 56,
   y = 72,
+  pattern = "placeholder.stone",
   width = 16,
   height = 16,
-  name = "stone_2",
-  pattern = "placeholder.stone",
   enabled_at_start = true,
 }
-
 

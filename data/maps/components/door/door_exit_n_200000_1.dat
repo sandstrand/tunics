@@ -11,6 +11,15 @@ properties{
 
 tile{
   layer = 1,
+  x = 144,
+  y = 8,
+  width = 32,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
   x = 168,
   y = 16,
   width = 8,
@@ -55,22 +64,22 @@ tile{
 }
 
 sensor{
+  name = "sensor",
   layer = 1,
   x = 8,
   y = 13,
   width = 16,
   height = 16,
-  name = "sensor",
 }
 
 dynamic_tile{
+  name = "door_open",
   layer = 1,
   x = 152,
   y = 16,
+  pattern = "wall_stairs_curved.up.n",
   width = 16,
   height = 16,
-  name = "door_open",
-  pattern = "wall_stairs_curved.up.n",
   enabled_at_start = true,
 }
 
@@ -84,21 +93,21 @@ wall{
 }
 
 stairs{
+  name = "stairs",
   layer = 1,
   x = 152,
   y = 8,
-  name = "stairs",
   direction = 1,
-  subtype = "0",
+  subtype = 0,
 }
 
 sensor{
+  name = "entering",
   layer = 1,
   x = 8,
   y = 29,
   width = 16,
   height = 16,
-  name = "entering",
 }
 
 tile{
@@ -118,5 +127,4 @@ tile{
   height = 8,
   pattern = "closed_door_top.n",
 }
-
 

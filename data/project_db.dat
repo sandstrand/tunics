@@ -53,6 +53,7 @@ map{ id = "components/filler/filler_000001_holestones", description = "Filler 00
 map{ id = "components/filler/filler_000001_statuestones", description = "Filler 000001 statuestones" }
 map{ id = "components/filler/filler_000001_stones", description = "Filler 000001 stones" }
 map{ id = "components/filler/filler_000001_torchstones", description = "Filler 000001 torchstones" }
+map{ id = "components/filler/filler_000002_empty", description = "Filler 000002 empty" }
 map{ id = "components/filler/filler_000004_1", description = "Filler 000004 1" }
 map{ id = "components/filler/filler_000004_12", description = "Filler 000004 12" }
 map{ id = "components/filler/filler_000004_12b", description = "Filler 000004 12b" }
@@ -69,7 +70,9 @@ map{ id = "components/filler/filler_000004_stones", description = "Filler 000004
 map{ id = "components/filler/filler_000004_torchstone", description = "Filler 000004 torchstone" }
 map{ id = "components/filler/filler_000007_1", description = "Filler 000007 1" }
 map{ id = "components/filler/filler_000007_barrierstones", description = "Filler 000007 barrierstones" }
+map{ id = "components/filler/filler_000010_empty", description = "Filler 000010 empty" }
 map{ id = "components/filler/filler_000020_1", description = "Filler 000020 1 enemy" }
+map{ id = "components/filler/filler_000040_empty", description = "Filler 000040 empty" }
 map{ id = "components/filler/filler_000100_1", description = "Filler 000100 1" }
 map{ id = "components/filler/filler_000100_12", description = "Filler 000100 12" }
 map{ id = "components/filler/filler_000100_12b", description = "Filler 000100 12b" }
@@ -87,6 +90,7 @@ map{ id = "components/filler/filler_000100_torchstones", description = "Filler 0
 map{ id = "components/filler/filler_000111_1", description = "Filler 000111 1 spikes" }
 map{ id = "components/filler/filler_000111_barrierstones", description = "Filler 000111 barrierstones" }
 map{ id = "components/filler/filler_000111_carpetstones", description = "Filler 000111 carpetstones" }
+map{ id = "components/filler/filler_000200_empty", description = "Filler 000200 empty" }
 map{ id = "components/filler/filler_000400_1", description = "Filler 000400 1" }
 map{ id = "components/filler/filler_000400_12", description = "Filler 000400 12" }
 map{ id = "components/filler/filler_000400_12b", description = "Filler 000400 12b" }
@@ -113,16 +117,19 @@ map{ id = "components/filler/filler_000777_6", description = "Filler 000777 6 Ba
 map{ id = "components/filler/filler_000777_7", description = "Filler 000777 7" }
 map{ id = "components/filler/filler_000777_8", description = "Filler 000777 8" }
 map{ id = "components/filler/filler_000777_9", description = "Filler 000777 9" }
+map{ id = "components/filler/filler_002000_wall_south", description = "Filler 002000 wall south" }
 map{ id = "components/filler/filler_002007_1", description = "Filler 002007 1" }
 map{ id = "components/filler/filler_002007_2", description = "Filler 002007 2" }
 map{ id = "components/filler/filler_002007_3", description = "Filler 002007 3" }
 map{ id = "components/filler/filler_002007_4", description = "Filler 002007 4" }
+map{ id = "components/filler/filler_010000_wall_east", description = "Filler 010000 wall east" }
 map{ id = "components/filler/filler_010111_1", description = "Filler 010111 1" }
 map{ id = "components/filler/filler_010111_2", description = "Filler 010111 2" }
 map{ id = "components/filler/filler_010111_3", description = "Filler 010111 3" }
 map{ id = "components/filler/filler_010111_4", description = "Filler 010111 4" }
 map{ id = "components/filler/filler_012117_1", description = "Filler 012117 1 water corner" }
 map{ id = "components/filler/filler_012117_2", description = "Filler 012117 2" }
+map{ id = "components/filler/filler_040000_wall_west", description = "Filler 040000 wall west" }
 map{ id = "components/filler/filler_040444_1", description = "Filler 040444 1" }
 map{ id = "components/filler/filler_040444_2", description = "Filler 040444 2" }
 map{ id = "components/filler/filler_040444_3", description = "Filler 040444 3" }
@@ -132,6 +139,7 @@ map{ id = "components/filler/filler_042447_2", description = "Filler 042447 2" }
 map{ id = "components/filler/filler_050777_1", description = "Filler 050777 1" }
 map{ id = "components/filler/filler_050777_2", description = "Filler 050777 2 Rats room" }
 map{ id = "components/filler/filler_050777_6", description = "Filler 050777 6 Pikes and statues" }
+map{ id = "components/filler/filler_200000_wall_north", description = "Filler 200000 wall north" }
 map{ id = "components/filler/filler_200700_1", description = "Filler 200700 1" }
 map{ id = "components/filler/filler_200700_2", description = "Filler 200700 2" }
 map{ id = "components/filler/filler_200700_3", description = "Filler 200700 3" }
@@ -322,6 +330,7 @@ map{ id = "dev/best_practice", description = "Best practice" }
 map{ id = "dev/obstacles", description = "Obstacles" }
 map{ id = "dev/puzzles", description = "Puzzles" }
 map{ id = "dev/room_template", description = "Room1 template" }
+map{ id = "dev/templates", description = "Templates" }
 map{ id = "dev/tileset_test", description = "Tileset test" }
 map{ id = "dungeons/dungeon1", description = "Dungeon1" }
 map{ id = "rooms/cutscene", description = "Cutscene" }

@@ -11,6 +11,24 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 272,
+  height = 80,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 80,
+  y = 32,
+  width = 160,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
   x = 8,
   y = 72,
   width = 24,
@@ -189,6 +207,15 @@ tile{
   pattern = "wall_border_outer_corner.high.nw",
 }
 
+tile{
+  layer = 1,
+  x = 80,
+  y = 8,
+  width = 160,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
 dynamic_tile{
   name = "switch",
   layer = 1,
@@ -270,6 +297,33 @@ tile{
   y = 8,
   width = 48,
   height = 64,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 96,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 8,
+  width = 8,
+  height = 96,
   pattern = "ceiling",
 }
 

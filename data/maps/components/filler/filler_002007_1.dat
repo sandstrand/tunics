@@ -11,6 +11,15 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 136,
+  width = 272,
+  height = 16,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
   x = 8,
   y = 144,
   width = 24,
@@ -72,4 +81,21 @@ tile{
   pattern = "ceiling",
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 136,
+  width = 8,
+  height = 32,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 136,
+  width = 8,
+  height = 32,
+  pattern = "ceiling",
+}
 

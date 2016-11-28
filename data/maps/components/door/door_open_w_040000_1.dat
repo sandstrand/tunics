@@ -73,12 +73,12 @@ wall{
 }
 
 sensor{
+  name = "sensor",
   layer = 1,
   x = 40,
   y = 125,
   width = 16,
   height = 16,
-  name = "sensor",
 }
 
 tile{
@@ -98,5 +98,4 @@ tile{
   height = 32,
   pattern = "open_door_top.low.w",
 }
-
 

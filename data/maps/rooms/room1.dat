@@ -3,235 +3,216 @@ properties{
   y = 0,
   width = 320,
   height = 240,
-  world = "https://github.com/christopho/zsdx.git",
   min_layer = 0,
   max_layer = 2,
+  world = "https://github.com/christopho/zsdx.git",
   tileset = "dungeon.tower_of_hera",
   music = "same",
 }
 
 tile{
-  layer = 1,
-  x = 32,
-  y = 8,
-  width = 256,
-  height = 24,
-  pattern = "high_wall.n",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 208,
-  width = 256,
-  height = 24,
-  pattern = "high_wall.s",
-}
-
-tile{
-  layer = 1,
-  x = 8,
-  y = 32,
-  width = 24,
-  height = 176,
-  pattern = "high_wall.w",
-}
-
-tile{
-  layer = 1,
-  x = 288,
-  y = 32,
-  width = 24,
-  height = 176,
-  pattern = "high_wall.e",
-}
-
-tile{
-  layer = 1,
-  x = 8,
-  y = 8,
-  width = 24,
-  height = 24,
-  pattern = "high_wall_inner_corner.nw",
-}
-
-tile{
-  layer = 1,
-  x = 288,
-  y = 8,
-  width = 24,
-  height = 24,
-  pattern = "high_wall_inner_corner.ne",
-}
-
-tile{
-  layer = 1,
-  x = 288,
-  y = 208,
-  width = 24,
-  height = 24,
-  pattern = "high_wall_inner_corner.se",
-}
-
-tile{
-  layer = 1,
-  x = 8,
-  y = 208,
-  width = 24,
-  height = 24,
-  pattern = "high_wall_inner_corner.sw",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 32,
-  width = 256,
-  height = 8,
-  pattern = "wall_border.high.n",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 200,
-  width = 256,
-  height = 8,
-  pattern = "wall_border.high.s",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 32,
-  width = 8,
-  height = 176,
-  pattern = "wall_border.high.w",
-}
-
-tile{
-  layer = 1,
-  x = 280,
-  y = 32,
-  width = 8,
-  height = 176,
-  pattern = "wall_border.high.e",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "wall_border_inner_corner.high.nw",
-}
-
-tile{
-  layer = 1,
-  x = 32,
-  y = 200,
-  width = 8,
-  height = 8,
-  pattern = "wall_border_inner_corner.high.sw",
-}
-
-tile{
-  layer = 1,
-  x = 280,
-  y = 200,
-  width = 8,
-  height = 8,
-  pattern = "wall_border_inner_corner.high.se",
-}
-
-tile{
-  layer = 1,
-  x = 280,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "wall_border_inner_corner.high.ne",
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 152,
-  y = 16,
-  width = 16,
-  height = 16,
-  name = "crack_north",
-  pattern = "cracked_wall.n",
-  enabled_at_start = false,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 288,
-  y = 112,
-  width = 16,
-  height = 16,
-  name = "crack_east",
-  pattern = "cracked_wall.e",
-  enabled_at_start = false,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 152,
-  y = 208,
-  width = 16,
-  height = 16,
-  name = "crack_south",
-  pattern = "cracked_wall.s",
-  enabled_at_start = false,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 16,
-  y = 112,
-  width = 16,
-  height = 16,
-  name = "crack_west",
-  pattern = "cracked_wall.w",
-  enabled_at_start = false,
-}
-
-tile{
-  layer = 2,
-  x = 0,
-  y = 8,
-  width = 8,
-  height = 224,
-  pattern = "ceiling",
-}
-
-tile{
-  layer = 2,
-  x = 312,
-  y = 8,
-  width = 8,
-  height = 224,
-  pattern = "ceiling",
-}
-
-tile{
-  layer = 2,
+  layer = 0,
   x = 0,
   y = 0,
   width = 320,
-  height = 8,
-  pattern = "ceiling",
+  height = 240,
+  pattern = "lava_hole",
 }
 
 tile{
-  layer = 2,
-  x = 0,
-  y = 232,
-  width = 320,
-  height = 8,
-  pattern = "ceiling",
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 256,
+  height = 176,
+  pattern = "floor_net",
 }
 
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 256,
+  height = 8,
+  pattern = "wall_border.low.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 256,
+  height = 8,
+  pattern = "wall_border.low.s",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.low.w",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.low.e",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 24,
+  width = 24,
+  height = 192,
+  pattern = "low_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 24,
+  width = 24,
+  height = 192,
+  pattern = "low_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "low_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "low_wall_inner_corner.sw",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "low_wall_inner_corner.se",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "low_wall_inner_corner.ne",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.low.sw",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.low.ne",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.low.se",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.low.nw",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 8,
+  width = 256,
+  height = 24,
+  pattern = "low_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 208,
+  width = 256,
+  height = 24,
+  pattern = "low_wall.s",
+}
+
+dynamic_tile{
+  name = "crack_north",
+  layer = 1,
+  x = 152,
+  y = 16,
+  pattern = "cracked_wall.n",
+  width = 16,
+  height = 16,
+  enabled_at_start = false,
+}
+
+dynamic_tile{
+  name = "crack_east",
+  layer = 1,
+  x = 288,
+  y = 112,
+  pattern = "cracked_wall.e",
+  width = 16,
+  height = 16,
+  enabled_at_start = false,
+}
+
+dynamic_tile{
+  name = "crack_south",
+  layer = 1,
+  x = 152,
+  y = 208,
+  pattern = "cracked_wall.s",
+  width = 16,
+  height = 16,
+  enabled_at_start = false,
+}
+
+dynamic_tile{
+  name = "crack_west",
+  layer = 1,
+  x = 16,
+  y = 112,
+  pattern = "cracked_wall.w",
+  width = 16,
+  height = 16,
+  enabled_at_start = false,
+}
 

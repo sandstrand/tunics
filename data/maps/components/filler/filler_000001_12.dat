@@ -11,6 +11,33 @@ properties{
 
 tile{
   layer = 1,
+  x = 184,
+  y = 136,
+  width = 112,
+  height = 80,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 144,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.high.e",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 200,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.s",
+}
+
+tile{
+  layer = 1,
   x = 224,
   y = 144,
   width = 48,
@@ -36,15 +63,68 @@ tile{
   pattern = "small_statue.1",
 }
 
+tile{
+  layer = 1,
+  x = 288,
+  y = 208,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.se",
+}
+
+tile{
+  layer = 1,
+  x = 288,
+  y = 144,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.e",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 208,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
+  x = 280,
+  y = 200,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.se",
+}
+
 dynamic_tile{
+  name = "enemy_",
   layer = 1,
   x = 184,
   y = 152,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 184,
+  y = 232,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 312,
+  y = 136,
+  width = 8,
+  height = 96,
+  pattern = "ceiling",
+}
 

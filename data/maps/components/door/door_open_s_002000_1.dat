@@ -11,6 +11,15 @@ properties{
 
 tile{
   layer = 1,
+  x = 144,
+  y = 208,
+  width = 32,
+  height = 24,
+  pattern = "high_wall.s",
+}
+
+tile{
+  layer = 1,
   x = 152,
   y = 208,
   width = 16,
@@ -73,12 +82,12 @@ wall{
 }
 
 sensor{
+  name = "sensor",
   layer = 1,
   x = 160,
   y = 205,
   width = 16,
   height = 16,
-  name = "sensor",
 }
 
 tile{
@@ -98,5 +107,4 @@ tile{
   height = 8,
   pattern = "open_door_top.low.s",
 }
-
 

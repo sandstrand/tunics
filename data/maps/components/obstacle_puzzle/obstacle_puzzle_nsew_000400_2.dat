@@ -11,6 +11,15 @@ properties{
 
 tile{
   layer = 1,
+  x = 24,
+  y = 24,
+  width = 112,
+  height = 80,
+  pattern = "placeholder.floor.high",
+}
+
+tile{
+  layer = 1,
   x = 72,
   y = 40,
   width = 16,
@@ -18,11 +27,65 @@ tile{
   pattern = "block",
 }
 
-switch{
+tile{
   layer = 1,
-  x = 0,
-  y = 0,
+  x = 8,
+  y = 8,
+  width = 24,
+  height = 24,
+  pattern = "high_wall_inner_corner.nw",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 32,
+  width = 24,
+  height = 64,
+  pattern = "high_wall.w",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 8,
+  width = 96,
+  height = 24,
+  pattern = "high_wall.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 96,
+  height = 8,
+  pattern = "wall_border.high.n",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.high.w",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "wall_border_inner_corner.high.nw",
+}
+
+switch{
   name = "switch",
+  layer = 1,
+  x = -8,
+  y = -8,
   subtype = "walkable",
   sprite = "entities/switch",
   needs_block = false,
@@ -30,11 +93,10 @@ switch{
 }
 
 block{
+  name = "block_1",
   layer = 1,
   x = 64,
   y = 85,
-  name = "block_1",
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -42,11 +104,10 @@ block{
 }
 
 block{
+  name = "block_2",
   layer = 1,
   x = 96,
   y = 69,
-  name = "block_2",
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -54,36 +115,53 @@ block{
 }
 
 dynamic_tile{
+  name = "enemy_1",
   layer = 1,
   x = 88,
   y = 72,
+  pattern = "placeholder.enemy",
   width = 32,
   height = 32,
-  name = "enemy_1",
-  pattern = "placeholder.enemy",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "treasure_obstacle_chest",
   layer = 1,
   x = 120,
   y = 56,
+  pattern = "placeholder.treasure_puzzle",
   width = 16,
   height = 16,
-  name = "treasure_obstacle_chest",
-  pattern = "placeholder.treasure_puzzle",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "treasure_open_chest",
   layer = 1,
   x = 120,
   y = 88,
+  pattern = "placeholder.treasure_open",
   width = 16,
   height = 16,
-  name = "treasure_open_chest",
-  pattern = "placeholder.treasure_open",
   enabled_at_start = true,
 }
 
+tile{
+  layer = 2,
+  x = 0,
+  y = 8,
+  width = 8,
+  height = 96,
+  pattern = "ceiling",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 136,
+  height = 8,
+  pattern = "ceiling",
+}
 

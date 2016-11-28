@@ -171,6 +171,7 @@ local counter = 0
 function mapmeta:include(x, y, name, data, style)
     zentropy.assert(style)
     zentropy.assert(data.name)
+    print(name)
 
     local component_prefix = string.format('__include_%d_', counter)
     counter = counter + 1
@@ -190,7 +191,7 @@ function mapmeta:include(x, y, name, data, style)
             method = function (self, properties)
                 if properties.pattern and string.sub(properties.pattern, 1, 12) == 'placeholder.' then
                     if properties.pattern == 'placeholder.floor.high' then
-                        properties.pattern = style:get_high_floor(data.name)
+                        properties.pattern = style.floor.high
                     end
                 end
                 return self:create_dynamic_tile(properties)
